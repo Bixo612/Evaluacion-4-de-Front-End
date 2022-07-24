@@ -3,6 +3,8 @@ import ListadoResultados from './listadoProductos';
 //permite actualizar la pagina
 import { useState } from 'react';
 import './App.css';
+import guitarras from './assets/img/guitarras.jpg'
+import ukuleles from './assets/img/ukuleles.jpg'
 
 function App() {
 
@@ -68,11 +70,19 @@ function App() {
          <header>
             <nav class="navbar bg-light">
                <div class="container-fluid">
-                  <h1>Tienda de calzado</h1>
+                  <h1>Guitar Store Chile</h1>
                </div>
             </nav>
          </header>
          <body>
+            <div className="row g-3">
+               <div className="col-md-12 col-lg-6">
+                  <img src={guitarras} className="img-thumbnail" />
+               </div>
+               <div className="col-md-12 col-lg-6">
+                  <img src={ukuleles} className="img-thumbnail" />
+               </div>
+            </div>
             <div className="row g-3">
                <div class="col-xs-12 col-sm-6">
                   <h3> </h3>
@@ -85,10 +95,11 @@ function App() {
                      <label for="sel_articulo">Articulo</label>
                      <select className="form-select" name="sel_articulo" id="sel_articulo">
                         <option selected value="">Selecione articulo</option>
-                        <option value="Zapatillas">Zapatillas</option>
-                        <option value="Zapatos">Zapatos</option>
-                        <option value="Botas">Botas</option>
-                        <option value="Sandalias">Sandalias</option>
+                        <option value="Guitarra">Guitarra</option>
+                        <option value="Ukulele">Ukulele</option>
+                        <option value="Charango">Charango</option>
+                        <option value="Charango">Charango</option>
+                        <option value="Bajo">Bajo</option>
                      </select>
                      {/* Descripcion */}
                      <label for="txt_descripicion">Descripcion</label>
