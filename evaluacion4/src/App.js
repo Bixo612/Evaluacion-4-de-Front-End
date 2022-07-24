@@ -42,6 +42,10 @@ function App() {
          alert("El precio debe ser mayor a 0")
          return false;
       }
+      if (isNaN(cantidad)) {
+         alert("Debe ingresar una cantidad")
+         return false;
+      }
       if (cantidad <= 0) {
          alert("la cantidad debe ser 1 o mas")
          return false;
@@ -117,7 +121,7 @@ function App() {
                         <div class="col">
                            {/* Cantidad */}
                            <label for="num_cantidad">Cantidad</label>
-                           <input type="number" name="num_cantidad" id="num_cantidad" className="form-control" placeholder='-' />
+                           <input type="number" name="num_cantidad" id="num_cantidad" className="form-control" placeholder='0' />
                         </div>
                      </div>
                      {/* Total */}
